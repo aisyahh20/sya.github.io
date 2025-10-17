@@ -1,11 +1,11 @@
-/* 🌸 RESET DASAR */
+/*  RESET DASAR */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 🌸 BODY */
+/*  BODY */
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #ff7eb3, #ff758c, #ffffff);
@@ -21,7 +21,7 @@ body {
     padding: 20px;
 }
 
-/* 🌸 CONTAINER */
+/*  CONTAINER */
 .container {
     max-width: 480px;
     background-color: rgba(26, 34, 122, 0.8);
@@ -32,7 +32,7 @@ body {
     text-align: center;
 }
 
-/* 🌸 FOTO PROFIL */
+/*  FOTO PROFIL */
 .profile-pic {
     width: 150px;
     height: 150px;
@@ -49,7 +49,7 @@ body {
     object-fit: cover;
 }
 
-/* 🌸 TEKS UTAMA */
+/*  TEKS UTAMA */
 h1 {
     font-size: 1.7rem;
     margin-bottom: 10px;
@@ -62,7 +62,7 @@ h1 {
     margin-bottom: 25px;
 }
 
-/* 🌸 LINK BUTTON */
+/*  LINK BUTTON */
 .links {
     display: flex;
     flex-direction: column;
@@ -88,13 +88,13 @@ h1 {
     margin-right: 10px;
 }
 
-/* 🌸 EFEK HOVER */
+/*  EFEK HOVER */
 .link-button:hover {
     transform: translateY(-3px);
     color: white;
 }
 
-/* 🌸 WARNA TIAP PLATFORM */
+/*  WARNA TIAP PLATFORM */
 .instagram { border-left: 4px solid #e1306c; }
 .instagram:hover { background-color: #e1306c; }
 
@@ -113,14 +113,14 @@ h1 {
 .maps { border-left: 4px solid #34a853; }
 .maps:hover { background-color: #34a853; }
 
-/* 🌸 FOOTER */
+/*  FOOTER */
 footer {
     margin-top: 25px;
     font-size: 0.8rem;
     color: #555;
 }
 
-/* 🌸 RESPONSIF UNTUK HP */
+/*  RESPONSIF UNTUK HP */
 @media (max-width: 480px) {
     .profile-pic {
         width: 120px;
