@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Pribadi Saya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="judul" title="Profil Pribadi Mahasiswa"> Profil Pribadi saya </h1>
+    <p class="subtitle">Tugas Pemograman web — Universitasmu Negeri datokarama palu🌸</p>
+  </header>
+
+  <main>
+    <!-- ====== BAGIAN PROFIL ====== -->
+    <section class="profil" id="profil">
+      <img src="foto aisaa.jpg" alt="Foto Profil Siti Aisyah" title="Foto Profil Saya">
+      <div class="profil-info">
+        <h2>Hai! Saya Siti Aisyah 👋</h2>
+        <p><strong>NIM:</strong> 246270035</p>
+        <p><strong>Hobi:</strong> nonton film dan mendengarkan musik</p>
+      </div>
+    </section>
+
+    <!-- ====== TABEL BIODATA ====== -->
+    <section class="biodata" id="biodata">
+      <h2>Biodata Diri 📘</h2>
+      <table>
+        <tr><th>Nama</th><td>Siti Aisyah</td></tr>
+        <tr><th>Tanggal Lahir</th><td>11 Maret 2006</td></tr>
+        <tr><th>Alamat</th><td>Jl. Poros Palu Bangga Desa Beka</td></tr>
+        <tr><th>Email</th><td>aisyahsiti11032006@gmail.com</td></tr>
+      </table>
+    </section>
+
+    <!-- ====== HOBI ====== -->
+    <section class="hobi" id="hobi">
+      <div>
+        <h2>🌷 Hobi Saya</h2>
+        <ul>
+          <li>nonton film</li>
+          <li>mendengarkan musik</li>
+        </ul>
+      </div>
+      <div>
+        <h2>💫 Aktivitas Favorit</h2>
+        <ol>
+          <li>tidur</li>
+          <li>scroll tiktok</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ====== FORMULIR ====== -->
+    <section class="formulir" id="formulir">
+      <h2>📋 Formulir Data Diri</h2>
+      <form action="#" method="post">
+        <div>
+          <label for="nama">Nama:</label>
+          <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+        </div>
+
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+        </div>
+        <div>
+          <label for="Pasowrd">Passowrd:</label>
+          <input type="pasowrd" id="pasword" name="pasword"placeholder="pasword" required>
+        </div>
+
+        <div class="gender">
+          <label>Jenis Kelamin:</label>
+          <label><input type="radio" name="gender" value="Perempuan" required> Perempuan</label>
+          <label><input type="radio" name="gender" value="Laki-laki"> Laki-laki</label>
+          <label><input type="radio" name="gender" value="Boti"> Boti</label>
+        </div>
+
+        <div class="checkbox-group">
+          <label>Hobi:</label>
+          <label><input type="checkbox" name="hobi" value="Membaca"> Membaca</label>
+          <label><input type="checkbox" name="hobi" value="Menulis"> Menulis</label>
+          <label><input type="checkbox" name="hobi" value="Olahraga"> Olahraga</label>
+        </div>
+
+        <button type="submit" title="Kirim Data">🌸 Kirim</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Siti Aisyah | Dibuat dengan 💖 untuk tugas mata kuliah Web Dasar</p>
+  </footer>
+</body>
+</html>
