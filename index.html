@@ -1,62 +1,88 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@acc.syh - Link Pribadi</title>
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kumpulan Tugas Aisyah</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    iframe {
+      width: 90%;
+      height: 80vh;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background: white;
+      margin-bottom: 15px;
+    }
+    button {
+      padding: 10px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      margin: 5px;
+      transition: 0.2s;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="profile-pic">
-                <img src="foto aisyah.jpg" alt="Foto Profil siti aisyah ">
-            </div>
-            <h1>@acc.syh</h1>
-            <p class="bio">Seorang Mahasiswa  UIN Datokarama Palu</p>
-        </header>
+  <h1>📘 Kumpulan Tugas Aisyah</h1>
+  <iframe id="viewer" src="tugas1/index.html"></iframe><br />
+  <button id="prev">⬅ Sebelumnya</button>
+  <button id="next">Berikutnya ➡</button>
 
-        <section class="links">
-            <a href="https://www.instagram.com/acc.syh_?igsh=aDhvb21rcG0yYWpz" class="link-button instagram">
-                <i class="fab fa-instagram"></i>
-                <span>Instagram</span>
-            </a>
+  <script>
+    const tugas = [
+      "tugas1/index.html",
+      "tugas2/index.html",
+      "tugas3/index.html",
+      "tugas4/index.html"
+    ];
+    let current = 0;
 
-            <a href="https://youtube.com/@sitiaisyah-ri2bi?si=vRkexnAmgEYlBupw" class="link-button youtube">
-                <i class="fab fa-youtube"></i>
-                <span>YouTube</span>
-            </a>
+    const iframe = document.getElementById("viewer");
+    const nextBtn = document.getElementById("next");
+    const prevBtn = document.getElementById("prev");
 
-            <a href="https://www.tiktok.com/@aaaisyah003?is_from_webapp=1&sender_device=pc" class="link-button tiktok">
-                <i class="fab fa-tiktok"></i>
-                <span>TikTok</span>
-            </a>
+    function updateFrame() {
+      iframe.src = tugas[current];
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === tugas.length - 1;
+    }
 
-            <a href="https://www.facebook.com/aisyah.146334" class="link-button facebook">
-                <i class="fab fa-facebook"></i>
-                <span>Facebook</span>
-            </a>
+    nextBtn.addEventListener("click", () => {
+      if (current < tugas.length - 1) {
+        current++;
+        updateFrame();
+      }
+    });
 
-            <a href="https://open.spotify.com/user/31kam7g3xnqonyz7w4c3ywpf6aam?si=JicvaJzMSASoFiqR54AlAQV" class="link-button spotify">
-                <i class="fab fa-spotify"></i>
-                <span>Spotify</span>
-            </a>
+    prevBtn.addEventListener("click", () => {
+      if (current > 0) {
+        current--;
+        updateFrame();
+      }
+    });
 
-            <a href="https://maps.app.goo.gl/qQcWQmSr2TpLS7Pj7" class="link-button maps">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Maps</span>
-            </a>
-        </section>
-
-        <footer>
-            <p>© 2025 MyLinkTree</p>
-        </footer>
-    </div>
+    updateFrame();
+  </script>
 </body>
-</html> 
+</html>
