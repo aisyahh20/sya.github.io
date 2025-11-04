@@ -12,7 +12,6 @@ body {
     background-image: url("background.jpg");
     background-size: cover;
     background-position: center;
-    /* Dihapus: background-attachment: fixed; karena bisa menutupi elemen di GitHub Pages */
     color: #333;
     min-height: 100vh;
     display: flex;
@@ -142,9 +141,19 @@ footer {
     }
 }
 
-/* TAMBAHAN PERLINDUNGAN LINK SUPAYA SELALU BISA DIKLIK */
+/* ✅ FIX UTAMA: pastikan link bisa diklik di GitHub Pages */
+.container,
+header,
+.links,
+.link-button,
 a {
+    position: relative;
+    z-index: 9999 !important;
     pointer-events: auto !important;
-    z-index: 100 !important;
     cursor: pointer;
+}
+
+/* ✅ FIX TAMBAHAN: hapus layer background transparan yang menutupi link */
+body::before {
+    content: none !important;
 }
